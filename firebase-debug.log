@@ -1,0 +1,45 @@
+[debug] [2024-07-14T12:14:26.502Z] ----------------------------------------------------------------------
+[debug] [2024-07-14T12:14:26.508Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-07-14T12:14:26.509Z] CLI Version:   13.13.2
+[debug] [2024-07-14T12:14:26.509Z] Platform:      win32
+[debug] [2024-07-14T12:14:26.509Z] Node Version:  v20.11.1
+[debug] [2024-07-14T12:14:26.510Z] Time:          Sun Jul 14 2024 17:14:26 GMT+0500 (Pakistan Standard Time)
+[debug] [2024-07-14T12:14:26.510Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-14T12:14:26.650Z] > refreshing access token with scopes: []
+[debug] [2024-07-14T12:14:26.656Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-14T12:14:26.657Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-14T12:14:27.086Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-07-14T12:14:27.087Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-14T12:14:27.102Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-14T12:14:27.103Z] > authorizing via signed-in user (ghorisuhaib09@gmail.com)
+[debug] [2024-07-14T12:14:27.103Z] [iam] checking project myproject-94c9b for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-14T12:14:27.104Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/myproject-94c9b:testIamPermissions [none]
+[debug] [2024-07-14T12:14:27.105Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/myproject-94c9b:testIamPermissions x-goog-quota-user=projects/myproject-94c9b
+[debug] [2024-07-14T12:14:27.105Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myproject-94c9b:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-14T12:14:28.622Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/myproject-94c9b:testIamPermissions 200
+[debug] [2024-07-14T12:14:28.622Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myproject-94c9b:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-14T12:14:28.624Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myproject-94c9b [none]
+[debug] [2024-07-14T12:14:29.105Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myproject-94c9b 200
+[debug] [2024-07-14T12:14:29.105Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myproject-94c9b {"projectId":"myproject-94c9b","projectNumber":"907142284058","displayName":"myproject","name":"projects/myproject-94c9b","resources":{"hostingSite":"myproject-94c9b"},"state":"ACTIVE","etag":"1_421a6580-d8cc-428d-a3f8-227c4f3aff15"}
+[info] 
+[info] === Deploying to 'myproject-94c9b'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-07-14T12:14:29.116Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/myproject-94c9b/versions [none]
+[debug] [2024-07-14T12:14:29.117Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/myproject-94c9b/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-07-14T12:14:32.558Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/myproject-94c9b/versions 200
+[debug] [2024-07-14T12:14:32.558Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/myproject-94c9b/versions {"name":"projects/907142284058/sites/myproject-94c9b/versions/02a38c5193191069","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[myproject-94c9b]: beginning deploy... 
+[info] i  hosting[myproject-94c9b]: found 3 files in public 
+[debug] [2024-07-14T12:14:32.584Z] [hosting] uploading with 200 concurrency
+[debug] [2024-07-14T12:14:32.598Z] [hosting] hash cache [cHVibGlj] stored for 3 files
+[debug] [2024-07-14T12:14:32.598Z] [hosting][hash queue][FINAL] {"max":7,"min":2,"avg":3.6666666666666665,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":10}
+[debug] [2024-07-14T12:14:32.599Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/907142284058/sites/myproject-94c9b/versions/02a38c5193191069:populateFiles [none]
+[debug] [2024-07-14T12:14:32.599Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/907142284058/sites/myproject-94c9b/versions/02a38c5193191069:populateFiles {"files":{"/style.css":"604c83f446cb6e2dd0c1188348d484116b31f0e290ffa5de0e4044901e7341f1","/page2.html":"3e97b7c35f88ece41f633db1034ca11f6d455eba17cd77032d5a5dabcd9b9176","/index.html":"5ceb7bfb4bd2e72ce4de16d4ef843c3d5e4cef256eaa8f142914875290f6196a"}}
+[debug] [2024-07-14T12:14:33.204Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/907142284058/sites/myproject-94c9b/versions/02a38c5193191069:populateFiles 200
+[debug] [2024-07-14T12:14:33.204Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/907142284058/sites/myproject-94c9b/versions/02a38c5193191069:populateFiles {"uploadRequiredHashes":["5ceb7bfb4bd2e72ce4de16d4ef843c3d5e4cef256eaa8f142914875290f6196a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/myproject-94c9b/versions/02a38c5193191069/files"}
+[debug] [2024-07-14T12:14:33.206Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/myproject-94c9b/versions/02a38c5193191069/files/5ceb7bfb4bd2e72ce4de16d4ef843c3d5e4cef256eaa8f142914875290f6196a [none]
+[debug] [2024-07-14T12:14:33.206Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/myproject-94c9b/versions/02a38c5193191069/files/5ceb7bfb4bd2e72ce4de16d4ef843c3d5e4cef256eaa8f142914875290f6196a [stream]
+[debug] [2024-07-14T12:14:33.208Z] [hosting][populate queue][FINAL] {"max":610,"min":610,"avg":610,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":612}
+[debug] [2024-07-14T12:14:33.208Z] [hosting] uploads queued: 1
